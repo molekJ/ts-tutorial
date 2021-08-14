@@ -1,33 +1,40 @@
-// let greet = () => {
-//     console.log('hello world')
+type StringOrNum = string | number;
+
+type UserInfo = {
+    name: string;
+    uid: StringOrNum
+}
+
+const logDetails = (uid: StringOrNum, item: string) => {
+    console.log(`${item} has a uid of ${uid}`)
+}
+
+const greet = (user: UserInfo) => {
+    console.log(`${user.name} says hello`)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// const returnPassed = (param: string | number | boolean) : string | number | boolean => {
+//     return param;
 // }
 
-// greet();
+// console.log(returnPassed("kuba"));
+// console.log(returnPassed(12));
+// console.log(returnPassed(false));
 
-let greet: Function;
-
-// greet = "hello"
-
-greet = () => {
-    console.log("hello, again")
-}
-greet();
-
-
-
-const add = (a:number, b:number, c: number | string = 10 ) => {
-    console.log(a+b);
-    console.log(c)
-}
-
-add(5,7)
-
-
-const minus = (a: number, b:number): number => {
-    return a + b;
-}
-
-let result = minus(4, 5)
-console.log(result)
-// result = 'kub';
-
+// const returnPassedGeneric = <T>(param: T): T => {
+//     return param;
+// }
+// console.log(returnPassedGeneric("kuba"));
+// console.log(returnPassedGeneric(12));
+// console.log(returnPassedGeneric(false));

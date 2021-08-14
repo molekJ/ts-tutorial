@@ -1,23 +1,19 @@
 "use strict";
-// let greet = () => {
-//     console.log('hello world')
+var logDetails = function (uid, item) {
+    console.log(item + " has a uid of " + uid);
+};
+var greet = function (user) {
+    console.log(user.name + " says hello");
+};
+// const returnPassed = (param: string | number | boolean) : string | number | boolean => {
+//     return param;
 // }
-// greet();
-var greet;
-// greet = "hello"
-greet = function () {
-    console.log("hello, again");
-};
-greet();
-var add = function (a, b, c) {
-    if (c === void 0) { c = 10; }
-    console.log(a + b);
-    console.log(c);
-};
-add(5, 7);
-var minus = function (a, b) {
-    return a + b;
-};
-var result = minus(4, 5);
-console.log(result);
-// result = 'kub';
+// console.log(returnPassed("kuba"));
+// console.log(returnPassed(12));
+// console.log(returnPassed(false));
+// const returnPassedGeneric = <T>(param: T): T => {
+//     return param;
+// }
+// console.log(returnPassedGeneric("kuba"));
+// console.log(returnPassedGeneric(12));
+// console.log(returnPassedGeneric(false));
