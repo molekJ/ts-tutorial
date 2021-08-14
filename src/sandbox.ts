@@ -1,40 +1,39 @@
-type StringOrNum = string | number;
+// let greet: Function;
 
-type UserInfo = {
-    name: string;
-    uid: StringOrNum
+// example 1
+
+let greet: (a: string, b: string)=> void;
+greet = (name: string, greeting: string) => {
+    console.log(`${name} says ${greeting}`)
 }
+greet('kuba', 'siema');
 
-const logDetails = (uid: StringOrNum, item: string) => {
-    console.log(`${item} has a uid of ${uid}`)
+// example 2
+let calc: (a: number, b:number, c:string) => number;
+calc = (numOne: number, numTwo: number, action:string) => {
+    if(action ==="add") {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
 }
+console.log(calc(9,3,'ff'))
 
-const greet = (user: UserInfo) => {
-    console.log(`${user.name} says hello`)
+// example 3
+let logDetails: (obj:  {name: string, age: number}) => void;
+
+logDetails = (ninja: {name: string, age: number}) => {
+    console.log(`${ninja.name} is ${ninja.age} yers old`);
 }
+logDetails({name: "kuba", age: 309})
 
-
-
-
-
-
-
-
-
-
-
-
-// const returnPassed = (param: string | number | boolean) : string | number | boolean => {
-//     return param;
-// }
-
-// console.log(returnPassed("kuba"));
-// console.log(returnPassed(12));
-// console.log(returnPassed(false));
-
-// const returnPassedGeneric = <T>(param: T): T => {
-//     return param;
-// }
-// console.log(returnPassedGeneric("kuba"));
-// console.log(returnPassedGeneric(12));
-// console.log(returnPassedGeneric(false));
+// or
+let logDetails2: (obj:  {name: string, age: number}) => void;
+type person = {
+    name: string, age: number
+}
+logDetails2 = (ninja: person) => {
+    console.log(`${ninja.name} is ${ninja.age} yers old`);
+}
+logDetails2({name: "kuba", age: 309})

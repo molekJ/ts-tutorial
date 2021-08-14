@@ -1,19 +1,31 @@
 "use strict";
-var logDetails = function (uid, item) {
-    console.log(item + " has a uid of " + uid);
+// let greet: Function;
+// example 1
+var greet;
+greet = function (name, greeting) {
+    console.log(name + " says " + greeting);
 };
-var greet = function (user) {
-    console.log(user.name + " says hello");
+greet('kuba', 'siema');
+// example 2
+var calc;
+calc = function (numOne, numTwo, action) {
+    if (action === "add") {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
 };
-// const returnPassed = (param: string | number | boolean) : string | number | boolean => {
-//     return param;
-// }
-// console.log(returnPassed("kuba"));
-// console.log(returnPassed(12));
-// console.log(returnPassed(false));
-// const returnPassedGeneric = <T>(param: T): T => {
-//     return param;
-// }
-// console.log(returnPassedGeneric("kuba"));
-// console.log(returnPassedGeneric(12));
-// console.log(returnPassedGeneric(false));
+console.log(calc(9, 3, 'ff'));
+// example 3
+var logDetails;
+logDetails = function (ninja) {
+    console.log(ninja.name + " is " + ninja.age + " yers old");
+};
+logDetails({ name: "kuba", age: 309 });
+// or
+var logDetails2;
+logDetails2 = function (ninja) {
+    console.log(ninja.name + " is " + ninja.age + " yers old");
+};
+logDetails2({ name: "kuba", age: 309 });
